@@ -8,6 +8,11 @@ framework:
     #esi: true
     #fragments: true
 
+    http_client:
+        scoped_clients:
+            jph:
+                base_uri: https://randomuser.me/api/
+
 when@test:
     framework:
         test: true
