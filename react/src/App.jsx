@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import Membre from "./components/Membre.jsx";
 
 function App() {
     const [membres, setMembres] = useState([])
@@ -16,7 +17,7 @@ function App() {
     <>
       <div className="grid grid-cols-2 gap-4">
           {membres ? membres.map((membre) => (
-              <div key={membre.id} className="relative p-4 flex flex-col gap-2 border border-black rounded">
+              <a href={"/membre/"+membre.id} key={membre.id} className="relative p-4 flex flex-col gap-2 border border-black rounded">
                   <div className="flex gap-4 items-center">
                       <img src={membre.picture} alt="" className="rounded-full" />
                       <div>
@@ -29,7 +30,7 @@ function App() {
                       <p>{membre.city}</p>
                       <p>{membre.country}</p>
                   </div>
-              </div>
+              </a>
           )) :
               <h1>Aucune données...</h1>
           }
