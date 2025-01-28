@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ApiController extends AbstractController
 {
-    #[Route('/users', name: 'users_list', methods: ['GET'])]
+    #[Route('/', name: 'users_list', methods: ['GET'])]
     public function index(ApiHttpClient $apiHttpClient): Response
     {
         $users = $apiHttpClient->getUsers();
