@@ -13,10 +13,10 @@ function App() {
 
   return (
     <>
-      <div className="grid grid-flow-col gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {membres ? membres.map((membre) => (
               <a href={"/membre/"+membre.id} key={membre.id} className="p-4 flex flex-col gap-2 border border-black rounded">
-                  <div className="flex gap-4 items-center">
+                  <div className="flex flex-col xl:flex-row gap-4 items-center">
                       <img src={membre.picture} alt="" className="rounded-full" />
                         <p>{membre.last.toUpperCase()} {membre.first}</p>
                   </div>
