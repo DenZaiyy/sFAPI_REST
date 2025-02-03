@@ -13,6 +13,27 @@
         {% endblock %}
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <div class="external-links">
+                        <li><a href="/api" target="_blank">API Platform</a></li>
+                        <li><a href="http://localhost:5173/" target="_blank">ReactApp</a></li>
+                    </div>
+                    <div class="list">
+                        <li><a href="{{ path('users_list') }}" class="{{ app.request.attributes.get('_route') == 'users_list' ? 'active' : '' }}">Home</a></li>
+                    </div>
+                    <div class="auth">
+                        {% if app.user %}
+                            <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                        {% else %}
+                            <li><a href="{{ path('app_login') }}">Login</a></li>
+                            <li><a href="{{ path('app_register') }}">Register</a></li>
+                        {% endif %}
+                    </div>
+                </ul>
+            </nav>
+        </header>
         <main>
             {% block body %}{% endblock %}
         </main>

@@ -75,3 +75,42 @@ main {
     color: #c80c54;
     font-size: 1.4rem;
 }
+
+header {
+    padding: 25px;
+    width: 100%;
+    background: oklch(78.53% 0.1184 284);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all .3s ease;
+}
+
+header nav ul .external-links, header nav ul .list, header nav ul .auth {
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li a:hover {
+    color: #c80c54;
+    transition: all .3s ease;
+}
+
+header nav ul li a.active {
+    color: #c80c54;
+}
