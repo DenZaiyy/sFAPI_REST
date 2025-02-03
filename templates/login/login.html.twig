@@ -24,7 +24,8 @@
                value="{{ csrf_token('authenticate') }}"
         >
 
-        <input type="hidden" name="_h-pot" id="h-pot" value="" style="display: none ! important" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="phone" id="phone" value="" style="opacity: 0; pointer-events: none; width: 0; height: 0; position: absolute; top: 0; left: 0;" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="faxNumber" id="faxNumber" value="" style="opacity: 0; pointer-events: none; width: 0; height: 0; position: absolute; top: 0; left: 0;" tabindex="-1" autocomplete="off">
 
         {#
             Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
